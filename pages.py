@@ -18,13 +18,13 @@ class UrbanRoutesPage:
     phone_code_input = (By.ID, "code")
     confirm_code_button = (By.XPATH, "//button[text()='Confirmar']")
 
-    payment_method_button = (By.CLASS_NAME, "pp-button")
+    payment_method_button = (By.XPATH, "//div[text()='Método de pago' and @class='pp-text']")
 
     add_card_option = (By.XPATH, "//div[@class='pp-title' and text()='Agregar tarjeta']")
     card_number_input = (By.ID, "number")
     card_code_input = (By.XPATH, "//input[@id='code' and @placeholder='12']")
     add_button = (By.XPATH, "//div[contains(@class,'section active')]//button[text()='Agregar']")
-    close_payment_modal = (By.XPATH, '//div[@class="close-button section-close"]')
+    close_payment_modal = (By.XPATH, "//div[@class='payment-picker open']//div[@class='modal']//div[@class='section active']//button[@class='close-button section-close']")
 
     message_input = (By.ID, "comment")
 
@@ -95,7 +95,7 @@ class UrbanRoutesPage:
     def open_payment_method(self):
 
         WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.payment_method_button)
+            EC.visibility_of_element_located(self.payment_method_button)
         ).click()
 
     def add_card(self, number, code):
@@ -124,7 +124,7 @@ class UrbanRoutesPage:
 
     def close_payment(self):
         WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.close_payment_modal)
+            EC.visibility_of_element_located(self.close_payment_modal)
         ).click()
 
     def write_message(self, message):
