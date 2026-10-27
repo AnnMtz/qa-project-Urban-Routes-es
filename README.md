@@ -28,7 +28,8 @@ Se probaron las siguientes funcionalidades de la aplicación
 9. Solicitar taxi
 10. Esperar asignación de conductor
 
-#USO DE (POM) PARA VALIDAR LA FUNCIONALIDAD
+# USO DE (POM) PARA VALIDAR LA FUNCIONALIDAD
+
 <img width="895" height="642" alt="image" src="https://github.com/user-attachments/assets/4e5f362d-7d98-46b5-8770-a6c7e5c30c45" />
 <img width="906" height="590" alt="image" src="https://github.com/user-attachments/assets/6b01c5e8-fe61-49b9-b175-59c23b538a5d" />
 <img width="883" height="607" alt="image" src="https://github.com/user-attachments/assets/6c680d79-8436-4a94-89a4-905d8e54debf" />
